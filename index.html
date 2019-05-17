@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg-red-500 h-screen w-screen">
+    <h1 id="title" class="text-center text-2xl p-8 font-medium text-white">Survey Form</h1>
+    <div class="container bg-white mx-auto px-6 bg-gray-200 shadow rounded">
+      <p id="description" class="text-center py-6">Let us know how we can improve site.</p>
+      <form id="survey-form">
+
+        <div class="mb-5 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <div class="sm:w-1/2 flex justify-end">
+            <label class="px-5 py-2" for="name" id="name-label">Name:</label>
+          </div>
+          <div class="sm:w-1/2 flex">
+            <input class="px-2 py-1 rounded" type="text" id="name" placeholder="Enter your Name" required>
+          </div>
+        </div>
+
+        <div class="mb-5 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <div class="sm:w-1/2 flex justify-end">
+            <label class="px-5 py-2" for="email" id="email-label">Email:</label>
+          </div>
+          <div class="sm:w-1/2 flex">
+            <input class="px-2 py-1 rounded" type="email" id="email" placeholder="Enter your Email" required>
+          </div>
+        </div>
+
+        <div class="mb-5 flex justify-center">
+          <div class="sm:w-1/2 flex justify-end">
+            <label class="px-5 py-1" for="number" id="number-label">Rate:</label>
+          </div>
+          <div class="sm:w-1/2 flex">
+            <input class="px-2 py-1 rounded w-24" type="number" id="number" min="0" max="10" placeholder="Rate">
+          </div>
+        </div>
+
+        <div class="mb-5 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <div class="sm:w-1/2 flex justify-end">
+            <label class="py-2 px-4" for="dropdown">How did you hear about Site:</label>
+          </div>
+          <div class="sm:w-1/2 flex">
+            <select name="" id="dropdown" class="py-2">
+              <option disabled selected>Select an Option</option>
+              <option value="">Friend</option>
+              <option value="">Work</option>
+              <option value="">Family</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-5 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <div class="sm:w-1/2 flex justify-end">
+            <p class="py-1 px-5">how many times have you visited our site?: </p>
+          </div>
+          <div class="sm:w-1/2">
+            <!-- Checkboxes -->
+            <div class="py-1">
+              <input class="m-1" type="checkbox" name="once" id="once" value="once">
+              <label class="pt-2 pl-1" for="once">once a week</label>
+            </div>
+            <div class="py-1">
+              <input class="m-1" type="checkbox" name="twice" id="twice" value="twice">
+              <label class="pt-2 pl-1" for="twice">twice a week</label>
+            </div>
+            <div class="py-1">
+              <input class="m-1" type="checkbox" name="three" id="three" value="three">
+              <label class="pt-2 pl-1" for="three">three times a week</label>
+            </div>
+            <div class="py-1">
+              <input class="m-1" type="checkbox" name="everyday" id="everyday" value="everyday">
+              <label class="pt-2 pl-1" for="everyday">everyday</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 flex flex-col items-center md:flex-row md:justify-center md:items-stretch">
+          <div class="mr-5 mt-3 pb-4 md:w-1/2 flex justify-end">
+            <label for="feedback">Any Feedback?:</label>
+          </div>
+          <div class="md:w-1/2">
+            <textarea placeholder="Enter your Feedback here..." class="p-2 rounded" name="feedback" id="feedback"
+              cols="40" rows="8"></textarea>
+          </div>
+        </div>
+
+        <hr class="border border-black mb-5">
+
+        <div class="mb-5 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <div class="sm:w-1/2 flex justify-end">
+            <label for="subscribe" class="py-2 px-3">Do you want to subscribe to our newsletter?:</label>
+          </div>
+          <div class="sm:w-1/2">
+            <div><input class="m-2" type="radio" name="subscribe" id="yes" value="yes"><label for="yes">Yes</label>
+            </div>
+            <div><input class="m-2" type="radio" name="subscribe" id="no" value="no"><label for="no">No</label></div>
+          </div>
+        </div>
+
+        <div class="pb-8 flex flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+          <input id="submit" class="px-5 py-2 bg-blue-500 rounded" type="submit" value="submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
